@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Madera y Lujo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Navbar mejorado -->
+  <header class="sticky top-0 z-50 flex items-center justify-between px-4 md:px-8 py-3 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <h1 class="text-xl md:text-2xl font-bold tracking-tight text-gray-800">Madera y Lujo</h1>
+    <nav class="flex items-center">
+      <button id="menu-toggle" class="block md:hidden text-gray-700 hover:text-black focus:outline-none transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      <ul id="menu" class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+        <li><a href="about.html" class="hover:text-black transition-colors">Nosotros</a></li>
+        <li><a href="catalogue.html" class="hover:text-black transition-colors">Catálogo</a></li>
+        <li><a href="customOrders.html" class="hover:text-black transition-colors">Pedidos a Medida</a></li>
+        <li><a href="contactUs.html" class="hover:text-black transition-colors">Contacto</a></li>
+        <li><a href="gallery.html" class="bg-black text-white rounded-full px-5 py-2 hover:bg-gray-800 transition-colors shadow-md hover:shadow-lg">Galería</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    // JavaScript para alternar el menú móvil
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Cerrar menú al hacer clic en un enlace (opcional)
+    document.querySelectorAll('#menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          menu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+
+  <!-- Sección Hero -->
+  <section class="grid md:grid-cols-2 items-center gap-6 px-6 py-10">
+    <div>
+      <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Explora diseños detallados de puertas de madera</h2>
+      <p class="text-gray-600 mb-6">Colección premium de puertas de madera importadas de todo el mundo.</p>
+      <div class="flex gap-4">
+        <button class="bg-black text-white px-5 py-2 rounded-full hover:opacity-90">Empezar a explorar</button>
+        <button class="border border-black px-5 py-2 rounded-full hover:bg-black hover:text-white transition">Personalizar puerta</button>
+      </div>
+    </div>
+    <div class="relative">
+      <img src="images/1.jpg" alt="puerta" class="rounded-xl w-full h-72 object-cover"/>
+      <div class="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow w-60">
+        <p class="font-semibold text-sm">Destacado - Stock limitado</p>
+        <p class="text-gray-500 text-xs">2 acabados disponibles</p>
+        <div class="mt-2 flex gap-2">
+          <button class="bg-black text-white text-sm px-3 py-1 rounded-full">Comprar ahora</button>
+          <button class="border text-sm px-3 py-1 rounded-full">Ver detalles</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estadísticas -->
+  <section class="flex justify-center gap-10 text-center py-6">
+    <div>
+      <p class="text-2xl font-bold">500+</p>
+      <p class="text-gray-500">Puertas</p>
+    </div>
+    <div>
+      <p class="text-2xl font-bold">200</p>
+      <p class="text-gray-500">Tiendas</p>
+    </div>
+    <div>
+      <p class="text-2xl font-bold">50k+</p>
+      <p class="text-gray-500">Clientes satisfechos</p>
+    </div>
+  </section>
+
+  <!-- Sección de diseños destacados -->
+  <section class="px-6 py-10">
+    <h2 class="text-2xl font-bold mb-6">Diseños destacados este mes</h2>
+    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+      <!-- Tarjeta 1 -->
+      <div class="rounded-lg overflow-hidden shadow-lg">
+        <div class="h-32 bg-cover bg-center" style="background-image: url('images/8.jpg')"></div>
+        <div class="bg-black text-white p-4">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="images/7.jpg" alt="avatar" class="rounded-full w-8 h-8 border-2 border-white">
+            <div>
+              <p class="text-sm font-bold">Alex Woodworks</p>
+              <p class="text-xs text-gray-300">@WoodenCraftsman</p>
+            </div>
+          </div>
+          <div class="flex justify-between text-xs text-gray-300 mb-3">
+            <span>Favoritos<br><strong>₡600,000</strong></span>
+            <span>Clientes<br><strong>18,500</strong></span>
+            <button class="bg-white text-black px-3 py-1 rounded-full text-xs font-semibold">Contactar</button>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <img class="rounded" src="images/2.jpg" alt="miniatura" />
+            <img class="rounded" src="images/4.jpg" alt="miniatura" />
+            <img class="rounded" src="images/5.jpg" alt="miniatura" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="rounded-lg overflow-hidden shadow-lg">
+        <div class="h-32 bg-cover bg-center" style="background-image: url('images/7.jpg')"></div>
+        <div class="bg-black text-white p-4">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="images/7.jpg" alt="avatar" class="rounded-full w-8 h-8 border-2 border-white">
+            <div>
+              <p class="text-sm font-bold">Olivia Oak</p>
+              <p class="text-xs text-gray-300">@Oaklover</p>
+            </div>
+          </div>
+          <div class="flex justify-between text-xs text-gray-300 mb-3">
+            <span>Favoritos<br><strong>₡720,000</strong></span>
+            <span>Madera<br><strong>Explorar</strong></span>
+            <button class="bg-white text-black px-3 py-1 rounded-full text-xs font-semibold">Comprar ahora</button>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <img class="rounded" src="images/1.jpg" alt="miniatura" />
+            <img class="rounded" src="images/3.jpg" alt="miniatura" />
+            <img class="rounded" src="images/4.jpg" alt="miniatura" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="rounded-lg overflow-hidden shadow-lg">
+        <div class="h-32 bg-cover bg-center" style="background-image: url('images/3.jpg')"></div>
+        <div class="bg-black text-white p-4">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="images/2.jpg" alt="avatar" class="rounded-full w-8 h-8 border-2 border-white">
+            <div>
+              <p class="text-sm font-bold">Alex Woodworks</p>
+              <p class="text-xs text-gray-300">@WoodenCraftsman</p>
+            </div>
+          </div>
+          <div class="flex justify-between text-xs text-gray-300 mb-3">
+            <span>Favoritos<br><strong>₡600,000</strong></span>
+            <span>Clientes<br><strong>18,500</strong></span>
+            <button class="bg-white text-black px-3 py-1 rounded-full text-xs font-semibold">Contactar</button>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <img class="rounded" src="images/2.jpg" alt="miniatura" />
+            <img class="rounded" src="images/4.jpg" alt="miniatura" />
+            <img class="rounded" src="images/5.jpg" alt="miniatura" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4 -->
+      <div class="rounded-lg overflow-hidden shadow-lg">
+        <div class="h-32 bg-cover bg-center" style="background-image: url('images/2.jpg')"></div>
+        <div class="bg-black text-white p-4">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="https://i.pravatar.cc/40?img=20" alt="avatar" class="rounded-full w-8 h-8 border-2 border-white">
+            <div>
+              <p class="text-sm font-bold">Olivia Oak</p>
+              <p class="text-xs text-gray-300">@Oaklover</p>
+            </div>
+          </div>
+          <div class="flex justify-between text-xs text-gray-300 mb-3">
+            <span>Favoritos<br><strong>₡720,000</strong></span>
+            <span>Madera<br><strong>Explorar</strong></span>
+            <button class="bg-white text-black px-3 py-1 rounded-full text-xs font-semibold">Comprar ahora</button>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <img class="rounded" src="images/1.jpg" alt="miniatura" />
+            <img class="rounded" src="images/3.jpg" alt="miniatura" />
+            <img class="rounded" src="images/4.jpg" alt="miniatura" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Consulta -->
+  <section class="px-6 py-12 bg-gray-100 grid md:grid-cols-2 items-center gap-10">
+    <div class="flex justify-center">
+      <img src="images/Contact us-pana.svg" alt="ilustración" class="w-64 h-auto">
+    </div>
+    <div>
+      <h3 class="text-2xl md:text-3xl font-bold mb-4">Explora nuestra colección de puertas de madera premium de todo el mundo.</h3>
+      <form class="flex flex-col sm:flex-row gap-4">
+        <input type="text" placeholder="Escribe tu consulta aquí" class="flex-1 px-4 py-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-black outline-none" />
+        <button type="submit" class="bg-black text-white px-6 py-2 rounded-md hover:opacity-90">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Sección destacada con imagen -->
+  <section class="relative">
+    <img src="images/3.jpg" alt="Puerta de madera destacada" class="rounded-xl w-full object-cover"/>
+    <div class="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow w-60">
+      <p class="font-semibold text-sm">Destacado - Stock limitado</p>
+      <p class="text-gray-500 text-xs">2 acabados disponibles</p>
+      <div class="mt-2 flex gap-2">
+        <button class="bg-black text-white text-sm px-3 py-1 rounded-full">Comprar ahora</button>
+        <button class="border text-sm px-3 py-1 rounded-full">Ver detalles</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="text-center py-6 border-t mt-6 text-sm text-gray-500">
+    <div class="flex flex-wrap justify-center gap-4 mb-2">
+      <a href="https://wa.me/50686547870" target="_blank" rel="noopener noreferrer" class="hover:underline">WhatsApp</a>
+      <a href="https://www.instagram.com/yeudy216/" target="_blank" rel="noopener noreferrer" class="hover:underline">Instagram</a>
+      <a href="#" class="hover:underline">Twitter</a>
+      <a href="mailto:yeudyrosales1213@gmail.com" class="hover:underline">Contacto</a>
+    </div>
+    <p>© 2025 Madera y Lujo</p>
+  </footer>
+
+</body>
+</html>
